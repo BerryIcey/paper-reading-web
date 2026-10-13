@@ -2,16 +2,16 @@
 
 **[简体中文](README.md) · English**
 
-![paper-reading-web](docs/images/cover.svg)
+![paper-to-html](docs/images/cover.svg)
 
-**Turn a research paper into a readable walkthrough: understand the figures, follow the argument, and recognize the limits of the evidence.**
+**Turn research papers into interactive, explained HTML reading guides.**
 
 A reusable **Codex Skill + HTML reader toolkit** for Chinese-first, source-faithful paper explanations.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-35644d.svg)](LICENSE)
-[![Recommended: v2](https://img.shields.io/badge/Recommended-v2-35644d.svg)](skills/paper-reading-web-v2/SKILL.md)
+[![Recommended: v2](https://img.shields.io/badge/Recommended-v2-35644d.svg)](skills/paper-to-html-v2/SKILL.md)
 
-[Download v2](https://github.com/BerryIcey/paper-reading-web/releases/latest) · [Read the Skill](skills/paper-reading-web-v2/SKILL.md) · [See the demo](#see-it-in-action) · [Report an issue](https://github.com/BerryIcey/paper-reading-web/issues)
+[Download v2](https://github.com/BerryIcey/paper-to-html/releases/latest) · [Read the Skill](skills/paper-to-html-v2/SKILL.md) · [See the demo](#see-it-in-action) · [Report an issue](https://github.com/BerryIcey/paper-to-html/issues)
 
 </div>
 
@@ -65,14 +65,14 @@ Content follows four zones: **core article → knowledge → advanced article co
 
 ### 1. Install v2
 
-Download `paper-reading-web-v2.zip` from [Releases](https://github.com/BerryIcey/paper-reading-web/releases/latest). Extract it and place the complete `paper-reading-web-v2` folder in your configured Codex user Skill directory, commonly `~/.codex/skills/`. Confirm that the Skill is available in the next turn or a new chat.
+Download `paper-to-html-v2.zip` from [Releases](https://github.com/BerryIcey/paper-to-html/releases/latest). Extract it and place the complete `paper-to-html-v2` folder in your configured Codex user Skill directory, commonly `~/.codex/skills/`. Confirm that the Skill is available in the next turn or a new chat.
 
-Alternatively, clone this repository and copy `skills/paper-reading-web-v2/`. If you already have an older installation, back it up outside the Skill discovery directory to avoid both versions being selected automatically. Repository updates do not automatically update installed copies on other devices.
+Alternatively, clone this repository and copy `skills/paper-to-html-v2/`. If you already have an older installation, back it up outside the Skill discovery directory to avoid both versions being selected automatically. Repository updates do not automatically update installed copies on other devices.
 
 ### 2. Give Codex a paper
 
 ```text
-$paper-reading-web-v2
+$paper-to-html-v2
 Create a core Chinese HTML walkthrough of this paper.
 Explain every main figure panel and review the text explanations,
 figure walkthroughs, and argument map against the Skill.
@@ -92,9 +92,9 @@ On the first local launch, choose overwrite mode or one/two historical backups. 
 Run the local service for the synthetic demo:
 
 ```sh
-git clone https://github.com/BerryIcey/paper-reading-web.git
-cd paper-reading-web
-python skills/paper-reading-web-v2/assets/reader-components/reading_server.py --root demo --port 18765
+git clone https://github.com/BerryIcey/paper-to-html.git
+cd paper-to-html
+python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root demo --port 18765
 ```
 
 Open `http://127.0.0.1:18765/paper-reading.html`. This is a temporary demo server. For a persistent paper project, follow the Skill's independent background-service instructions. The project queue stays on your machine and does not require an OpenAI API key.
@@ -104,7 +104,7 @@ Open `http://127.0.0.1:18765/paper-reading.html`. This is a temporary demo serve
 | Version | Skill directory | Purpose |
 |---|---|---|
 | v1.0.0 | [paper-reading-web](skills/paper-reading-web/SKILL.md) | Preserved original snapshot for comparison and rollback |
-| v2.0.1 | [paper-reading-web-v2](skills/paper-reading-web-v2/SKILL.md) | Recommended version with unified rules and corrected publication/settings behavior |
+| v2.0.2 | [paper-to-html-v2](skills/paper-to-html-v2/SKILL.md) | Recommended version with unified rules and corrected publication/settings behavior |
 
 v1 retains its original instructions, including rules superseded by v2. Do not mix reference files from the two versions. Future development is maintained here; the personal Skill library links to this project rather than distributing replacement copies.
 

@@ -2,17 +2,19 @@
 
 **简体中文 · [English](README.en.md)**
 
-![paper-reading-web](docs/images/cover.svg)
+![paper-to-html](docs/images/cover.svg)
 
-**把一篇论文，变成能顺着读、看懂每张图、知道证据边界的中文网页。**
+**把研究论文变成可交互、带讲解的 HTML 阅读指南。**
+
+Turn research papers into interactive, explained HTML reading guides.
 
 A reusable **Codex Skill + HTML reader toolkit** for source-faithful, panel-by-panel paper walkthroughs.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-35644d.svg)](LICENSE)
 [![Language: Chinese](https://img.shields.io/badge/Reading-Chinese%20first-6d8265.svg)](#能做什么)
-[![Current: v2](https://img.shields.io/badge/Recommended-v2-35644d.svg)](skills/paper-reading-web-v2/SKILL.md)
+[![Current: v2](https://img.shields.io/badge/Recommended-v2-35644d.svg)](skills/paper-to-html-v2/SKILL.md)
 
-[下载 v2](https://github.com/BerryIcey/paper-reading-web/releases/latest) · [查看 Skill](skills/paper-reading-web-v2/SKILL.md) · [体验演示](#先看效果) · [反馈问题](https://github.com/BerryIcey/paper-reading-web/issues)
+[下载 v2](https://github.com/BerryIcey/paper-to-html/releases/latest) · [查看 Skill](skills/paper-to-html-v2/SKILL.md) · [体验演示](#先看效果) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)
 
 </div>
 
@@ -60,14 +62,14 @@ A reusable **Codex Skill + HTML reader toolkit** for source-faithful, panel-by-p
 
 ### 1. 安装 v2
 
-从 [Releases](https://github.com/BerryIcey/paper-reading-web/releases/latest) 下载 `paper-reading-web-v2.zip`，解压后把完整 `paper-reading-web-v2` 文件夹放到 Codex 用户 Skill 目录中（通常为 `~/.codex/skills/`，以当前环境配置为准）。下一轮或新聊天确认 Skill 可用。
+从 [Releases](https://github.com/BerryIcey/paper-to-html/releases/latest) 下载 `paper-to-html-v2.zip`，解压后把完整 `paper-to-html-v2` 文件夹放到 Codex 用户 Skill 目录中（通常为 `~/.codex/skills/`，以当前环境配置为准）。下一轮或新聊天确认 Skill 可用。
 
-也可以克隆本仓库，复制 `skills/paper-reading-web-v2/`。若已有旧安装，先在 Skill 扫描目录之外保留备份，避免两套名称同时自动匹配。GitHub 更新不会自动同步各设备安装。
+也可以克隆本仓库，复制 `skills/paper-to-html-v2/`。若已有旧安装，先在 Skill 扫描目录之外保留备份，避免两套名称同时自动匹配。GitHub 更新不会自动同步各设备安装。
 
 ### 2. 给 Codex 一篇论文
 
 ```text
-$paper-reading-web-v2
+$paper-to-html-v2
 把这篇论文做成基础版HTML共读网页，所有主图逐面板讲清楚。
 请按照Skill检查正文解析、读图与全文论证链，不压缩后半部分。
 ```
@@ -85,9 +87,9 @@ $paper-reading-web-v2
 下面不需要模型，运行原创演示的本地服务：
 
 ```sh
-git clone https://github.com/BerryIcey/paper-reading-web.git
-cd paper-reading-web
-python skills/paper-reading-web-v2/assets/reader-components/reading_server.py --root demo --port 18765
+git clone https://github.com/BerryIcey/paper-to-html.git
+cd paper-to-html
+python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root demo --port 18765
 ```
 
 打开 `http://127.0.0.1:18765/paper-reading.html`。这是临时演示服务；正式文献项目按维护规范配置独立后台。项目队列在本机保存，不需要OpenAI API密钥。
@@ -97,7 +99,7 @@ python skills/paper-reading-web-v2/assets/reader-components/reading_server.py --
 | 版本 | 路径 | 用途 |
 |---|---|---|
 | v1.0.0 | [paper-reading-web](skills/paper-reading-web/SKILL.md) | 定稿前原始快照，独立保留、用于对比 |
-| v2.0.1 | [paper-reading-web-v2](skills/paper-reading-web-v2/SKILL.md) | 推荐版：消除旧规则冲突，整理现行规范并修复发布设置断点 |
+| v2.0.2 | [paper-to-html-v2](skills/paper-to-html-v2/SKILL.md) | 推荐版：消除旧规则冲突，整理现行规范并修复发布设置断点 |
 
 v1保留当时内容，包含已经被v2替代的规则；不要混合使用两个版本的参考文件。未来更新集中在本项目，[个人Skill库](https://github.com/BerryIcey/my-skills)只保留项目入口。
 

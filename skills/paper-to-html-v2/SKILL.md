@@ -1,9 +1,12 @@
 ---
-name: paper-reading-web-v2
+name: paper-to-html-v2
 description: 从研究论文PDF制作完整的中文HTML共读网页，或维护已有网页；包含核心正文完整翻译、所有主图逐面板讲解、论证链、知识卡、读者评议及可复用阅读控件。
 ---
 
-# 文献共读网页 v2
+# Paper to HTML v2
+
+Turn research papers into interactive, explained HTML reading guides.
+把研究论文变成可交互、带讲解的 HTML 阅读指南。
 
 ## 交付范围
 默认一次交付完整首次阅读核心：英文全题与中文译题、摘要、Introduction、连续Results及全部主图/面板、作者讨论与局限、必要知识卡、全文论证链、文末读者总结与评议，以及阅读控件与随手记。内部可分批制作，每个单元执行相同质量标准；不要让用户逐图追加请求才补齐核心。
