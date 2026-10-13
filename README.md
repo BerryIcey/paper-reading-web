@@ -1,5 +1,7 @@
 <div align="center">
 
+**简体中文 · [English](README.en.md)**
+
 ![paper-reading-web](docs/images/cover.svg)
 
 **把一篇论文，变成能顺着读、看懂每张图、知道证据边界的中文网页。**
