@@ -1,0 +1,21 @@
+name: Validate reader toolkit
+on: [push, pull_request]
+jobs:
+  toolkit:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node --check skills/paper-reading-web-v2/assets/reader-components/reader.js
+      - run: python -X utf8 skills/paper-reading-web-v2/scripts/test_publish_reader.py
+      - run: python -X utf8 skills/paper-reading-web-v2/scripts/test_components.py
+      - run: python -X utf8 skills/paper-reading-web-v2/scripts/test_reader_routes.py
+      - run: python -X utf8 skills/paper-reading-web-v2/scripts/test_reader_supervisor.py
