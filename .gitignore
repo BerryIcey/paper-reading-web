@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*.tmp
+.reader-*
+reading-notes.json
+reader-settings.json
+reader-versions.json
+versions/
+source-paper.pdf

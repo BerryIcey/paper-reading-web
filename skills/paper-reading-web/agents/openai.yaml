@@ -1,0 +1,4 @@
+interface:
+  display_name: "全文文献共读网页"
+  short_description: "将研究论文一次生成完整共读网页，统一图例、讲解逻辑、跳转与续读记录"
+  default_prompt: "使用 $paper-reading-web 将这篇文献制作成完整的中文共读网页，覆盖正文与所有主图并逐面板核对。"
