@@ -95,7 +95,7 @@ python skills/paper-reading-web-v2/assets/reader-components/reading_server.py --
 | 版本 | 路径 | 用途 |
 |---|---|---|
 | v1.0.0 | [paper-reading-web](skills/paper-reading-web/SKILL.md) | 定稿前原始快照，独立保留、用于对比 |
-| v2.0.0 | [paper-reading-web-v2](skills/paper-reading-web-v2/SKILL.md) | 推荐版：消除旧规则冲突，整理现行规范并修复发布设置断点 |
+| v2.0.1 | [paper-reading-web-v2](skills/paper-reading-web-v2/SKILL.md) | 推荐版：消除旧规则冲突，整理现行规范并修复发布设置断点 |
 
 v1保留当时内容，包含已经被v2替代的规则；不要混合使用两个版本的参考文件。未来更新集中在本项目，[个人Skill库](https://github.com/BerryIcey/my-skills)只保留项目入口。
 
