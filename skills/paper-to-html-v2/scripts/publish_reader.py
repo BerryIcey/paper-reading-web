@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from datetime import datetime,timezone,timedelta
 import json,re,os,hashlib,base64
+from teaching_contract import check_reader_html
 
 class Resources(HTMLParser):
     def __init__(self):super().__init__();self.external=[]
@@ -25,6 +26,8 @@ def publish(root,source,title,desktop=None):
     stamp=datetime.now(timezone(timedelta(hours=8)))
     content=source.read_text('utf-8')
     if '<body' not in content:raise ValueError('HTML requires body')
+    teaching_errors,_=check_reader_html(content)
+    if teaching_errors:raise ValueError('\n'.join(teaching_errors))
     resources=Resources();resources.feed(content)
     if resources.external:raise ValueError('Publish requires embedded offline resources: '+', '.join(resources.external[:3]))
     pdf=root/'source-paper.pdf'

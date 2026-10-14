@@ -27,3 +27,6 @@
 .reader-zoom-stage img{pointer-events:auto;-webkit-user-drag:none;user-select:none}
 
 .reader-notes-toggle{touch-action:none;user-select:none;-webkit-user-select:none;cursor:grab}.reader-notes-toggle:active{cursor:grabbing}
+.reader-text [data-reader-teaching] h4{font-size:18px;letter-spacing:0;color:#253a33;margin:24px 0 14px}.reader-text [data-reader-teaching] p{margin:14px 0}.reader-text [data-reader-teaching] table{width:100%;table-layout:fixed;border-collapse:collapse}.reader-text [data-reader-teaching] td,.reader-text [data-reader-teaching] th{overflow-wrap:anywhere;border:1px solid #d8dfd2;padding:9px;text-align:left;vertical-align:top}
+
+.term-object{background:#f3dfe2}.term-entity{background:#d9e8fa}.term-process{background:#ede0f5}.term-metric{background:#ffedc5}.term-neutral{background:#edf0e9}.term{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:.2em}
