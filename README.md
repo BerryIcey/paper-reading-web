@@ -12,9 +12,9 @@ A reusable **Codex Skill + HTML reader toolkit** for source-faithful, panel-by-p
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-35644d.svg)](LICENSE)
 [![Language: Chinese](https://img.shields.io/badge/Reading-Chinese%20first-6d8265.svg)](#能做什么)
-[![Current: v2](https://img.shields.io/badge/Recommended-v2-35644d.svg)](skills/paper-to-html-v2/SKILL.md)
+[![Current: v2.1](https://img.shields.io/badge/Recommended-v2.1-35644d.svg)](skills/paper-to-html-v2/SKILL.md)
 
-[下载 v2](https://github.com/BerryIcey/paper-to-html/releases/latest) · [查看 Skill](skills/paper-to-html-v2/SKILL.md) · [体验演示](#先看效果) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)
+[下载 v2.1](https://github.com/BerryIcey/paper-to-html/releases/latest) · [查看 Skill](skills/paper-to-html-v2/SKILL.md) · [体验演示](#先看效果) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)
 
 </div>
 
@@ -99,9 +99,12 @@ python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root
 | 版本 | 路径 | 用途 |
 |---|---|---|
 | v1.0.0 | [paper-reading-web](skills/paper-reading-web/SKILL.md) | 定稿前原始快照，独立保留、用于对比 |
-| v2.0.2 | [paper-to-html-v2](skills/paper-to-html-v2/SKILL.md) | 推荐版：消除旧规则冲突，整理现行规范并修复发布设置断点 |
+| v2.0.2 | [历史快照](https://github.com/BerryIcey/paper-to-html/tree/v2.0.2/skills/paper-to-html-v2) | 旧版：统一规则及发布设置修复 |
+| **v2.1** | [paper-to-html-v2](https://github.com/BerryIcey/paper-to-html/tree/v2.1/skills/paper-to-html-v2) | **最新推荐版**：完整逐面板带读契约、自适应概念发现与知识卡、原文及图注查阅入口 |
 
 v1保留当时内容，包含已经被v2替代的规则；不要混合使用两个版本的参考文件。未来更新集中在本项目，[个人Skill库](https://github.com/BerryIcey/my-skills)只保留项目入口。
+
+v2.1 下载：[完整技能包](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip) · [SHA-256](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.sha256) · [v2.1 更新报告](docs/v2.1-changes.md)。
 
 详细差异见 [v2 变更说明](docs/v2-changes.md)。下载包各自只有一个技能根目录，并提供SHA-256校验。Skill的v2与某篇文章的交付版本号互相独立。
 

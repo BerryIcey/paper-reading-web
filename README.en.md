@@ -9,9 +9,9 @@
 A reusable **Codex Skill + HTML reader toolkit** for Chinese-first, source-faithful paper explanations.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-35644d.svg)](LICENSE)
-[![Recommended: v2](https://img.shields.io/badge/Recommended-v2-35644d.svg)](skills/paper-to-html-v2/SKILL.md)
+[![Recommended: v2.1](https://img.shields.io/badge/Recommended-v2.1-35644d.svg)](skills/paper-to-html-v2/SKILL.md)
 
-[Download v2](https://github.com/BerryIcey/paper-to-html/releases/latest) · [Read the Skill](skills/paper-to-html-v2/SKILL.md) · [See the demo](#see-it-in-action) · [Report an issue](https://github.com/BerryIcey/paper-to-html/issues)
+[Download v2.1](https://github.com/BerryIcey/paper-to-html/releases/latest) · [Read the Skill](skills/paper-to-html-v2/SKILL.md) · [See the demo](#see-it-in-action) · [Report an issue](https://github.com/BerryIcey/paper-to-html/issues)
 
 </div>
 
@@ -104,9 +104,12 @@ Open `http://127.0.0.1:18765/paper-reading.html`. This is a temporary demo serve
 | Version | Skill directory | Purpose |
 |---|---|---|
 | v1.0.0 | [paper-reading-web](skills/paper-reading-web/SKILL.md) | Preserved original snapshot for comparison and rollback |
-| v2.0.2 | [paper-to-html-v2](skills/paper-to-html-v2/SKILL.md) | Recommended version with unified rules and corrected publication/settings behavior |
+| v2.0.2 | [Historical snapshot](https://github.com/BerryIcey/paper-to-html/tree/v2.0.2/skills/paper-to-html-v2) | Previous release with unified rules and corrected publication/settings behavior |
+| **v2.1** | [paper-to-html-v2](https://github.com/BerryIcey/paper-to-html/tree/v2.1/skills/paper-to-html-v2) | **Latest recommended release**: complete panel teaching contract, adaptive concept discovery and knowledge cards, lookup links in source text and captions |
 
 v1 retains its original instructions, including rules superseded by v2. Do not mix reference files from the two versions. Future development is maintained here; the personal Skill library links to this project rather than distributing replacement copies.
+
+Download v2.1: [Skill ZIP](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip) · [SHA-256](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.sha256) · [v2.1 change report](docs/v2.1-changes.md).
 
 See the [v2 change notes](docs/v2-changes.md), currently in Chinese. Each downloadable ZIP contains one Skill root folder and has a SHA-256 checksum. The Skill version and an individual paper's HTML release number are independent.
 
