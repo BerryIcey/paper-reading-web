@@ -29,19 +29,19 @@ This is a Skill that guides Codex in creating a paper-reading website, together 
 
 ## See it in action
 
-The demo uses original explanatory text and invented chart values. It contains no real paper, private notes, or author datasets. The screenshots show the current Chinese reader interface; this English README does not translate the Skill or add an English interface.
+The demo uses original explanatory text and invented chart values. It contains no real paper, private notes, or author datasets. The English feature demo omits translation blocks and highlights figure explanations, argument transitions, knowledge lookups, highlighting, and notes. It is a separate illustrative interface; the default Skill workflow remains Chinese-first.
 
-![Synchronized figure and explanation panels](docs/images/figure-reader.png)
+![Synchronized figure and explanation panels](docs/images/en-figure-reader.png)
 
 <details>
 <summary>Show the reading overview and notes panel</summary>
 
-![Reading overview](docs/images/reader-overview.png)
-![Collapsible notes panel](docs/images/notes-bookmark.png)
+![Reading overview](docs/images/en-reader-overview.png)
+![Collapsible notes panel](docs/images/en-notes-bookmark.png)
 
 </details>
 
-[Download the demo HTML](demo/paper-reading.html) and open it in a browser. GitHub displays its source rather than running it. The static file supports panel switching, zooming, knowledge cards, and returning to your previous position. Saving project notes requires the local service described below.
+[Download the demo HTML](demo/en/paper-reading.html) and open it in a browser. GitHub displays its source rather than running it. The static file supports panel switching, zooming, knowledge cards, and returning to your previous position. Saving project notes requires the local service described below.
 
 ## Features
 
@@ -94,7 +94,7 @@ Run the local service for the synthetic demo:
 ```sh
 git clone https://github.com/BerryIcey/paper-to-html.git
 cd paper-to-html
-python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root demo --port 18765
+python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root demo/en --port 18765
 ```
 
 Open `http://127.0.0.1:18765/paper-reading.html`. This is a temporary demo server. For a persistent paper project, follow the Skill's independent background-service instructions. The project queue stays on your machine and does not require an OpenAI API key.
