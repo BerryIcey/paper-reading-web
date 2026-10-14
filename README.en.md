@@ -11,7 +11,7 @@ Read each figure. Clarify unfamiliar concepts. Follow the whole argument.
 [![Recommended v2.1](https://img.shields.io/badge/Recommended-v2.1-2f6354?style=flat-square)](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1)
 [![MIT](https://img.shields.io/badge/License-MIT-657b72?style=flat-square)](LICENSE)
 
-**[Download v2.1](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip) · [Read the Skill](https://github.com/BerryIcey/paper-to-html/tree/v2.1/skills/paper-to-html-v2/SKILL.md) · [Release notes](docs/v2.1-changes.md) · [Report an issue](https://github.com/BerryIcey/paper-to-html/issues)**
+**[Download v2.1](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.zip) · [Read the Skill](https://github.com/BerryIcey/paper-to-html/blob/main/skills/paper-to-html-v2.1/SKILL.md) · [Release notes](docs/v2.1-changes.md) · [Report an issue](https://github.com/BerryIcey/paper-to-html/issues)**
 
 </div>
 
@@ -57,14 +57,14 @@ It is not a list of figure titles or a chain of unexplained terms. Parallel evid
 
 ### 1 · Install the recommended release
 
-Download [paper-to-html-v2-v2.1.zip](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip). Place its complete `paper-to-html-v2` folder in your configured Codex Skill directory, commonly `~/.codex/skills/`. Back up an existing installation outside that directory first, then start a new chat to confirm discovery.
+Download [paper-to-html-v2.1.zip](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.zip). Place its complete `paper-to-html-v2.1` folder in your configured Codex Skill directory, commonly `~/.codex/skills/`. Back up an existing installation outside that directory first, then start a new chat to confirm discovery.
 
-The release is **v2.1**; the invocation remains **`$paper-to-html-v2`**. Repository updates do not automatically update installed copies.
+The release is **v2.1**; the invocation is **`$paper-to-html-v2.1`**. Repository updates do not automatically update installed copies.
 
 ### 2 · Provide a paper
 
 ```text
-$paper-to-html-v2
+$paper-to-html-v2.1
 Create a Chinese HTML walkthrough of this paper.
 Translate the core text, explain every main figure panel,
 and show how the paper's argument develops.
@@ -84,7 +84,7 @@ Requires Python, but no OpenAI API key:
 ```sh
 git clone https://github.com/BerryIcey/paper-to-html.git
 cd paper-to-html
-python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root demo/en --port 18765
+python skills/paper-to-html-v2.1/assets/reader-components/reading_server.py --root demo/en --port 18765
 ```
 
 Open `http://127.0.0.1:18765/paper-reading.html` on the same machine. This is a temporary demo service; paper projects need a suitable independent background service.
@@ -101,7 +101,7 @@ Open `http://127.0.0.1:18765/paper-reading.html` on the same machine. This is a 
 
 **v2.2 is under local testing and has not been publicly released.** Its undergraduate reader baseline and further cross-domain adaptations are not included in the v2.1 package. Skill versions and individual paper-reader versions are independent.
 
-[v2.1 checksum](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.sha256) · [Compare versions](https://github.com/BerryIcey/paper-to-html/compare/v2.0.2...v2.1). Do not mix reference files from different versions.
+[v2.1 checksum](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.sha256) · [Compare versions](https://github.com/BerryIcey/paper-to-html/compare/v2.0.2...v2.1). Do not mix reference files from different versions.
 
 ## Practical limits
 

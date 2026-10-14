@@ -1,0 +1,4 @@
+interface:
+  display_name: "文献共读网页 v2.1"
+  short_description: "完整核心翻译、逐面板带读、论证链与可复用阅读控件"
+  default_prompt: "使用 $paper-to-html-v2.1 将这篇文献制作成基础版中文共读网页，覆盖核心正文、所有主图、必要知识卡及文末读者评议，并逐单元核对。"

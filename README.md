@@ -11,7 +11,7 @@
 [![推荐 v2.1](https://img.shields.io/badge/推荐版本-v2.1-2f6354?style=flat-square)](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1)
 [![MIT](https://img.shields.io/badge/License-MIT-657b72?style=flat-square)](LICENSE)
 
-**[下载 v2.1](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip) · [查看技能](https://github.com/BerryIcey/paper-to-html/tree/v2.1/skills/paper-to-html-v2/SKILL.md) · [更新说明](docs/v2.1-changes.md) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)**
+**[下载 v2.1](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.zip) · [查看技能](https://github.com/BerryIcey/paper-to-html/blob/main/skills/paper-to-html-v2.1/SKILL.md) · [更新说明](docs/v2.1-changes.md) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)**
 
 </div>
 
@@ -57,14 +57,14 @@
 
 ### 1 · 安装推荐版
 
-下载 [paper-to-html-v2-v2.1.zip](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip)，解压后将其中完整的 `paper-to-html-v2` 文件夹放进当前设备的 Codex Skill 目录，通常是 `~/.codex/skills/`。已有旧安装时先在技能目录外备份。新开聊天确认技能可用。
+下载 [paper-to-html-v2.1.zip](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.zip)，解压后将其中完整的 `paper-to-html-v2.1` 文件夹放进当前设备的 Codex Skill 目录，通常是 `~/.codex/skills/`。已有旧安装时先在技能目录外备份。新开聊天确认技能可用。
 
-下载包版本是 **v2.1**，技能调用名称仍是 **`$paper-to-html-v2`**。GitHub 更新不会自动更新电脑上的安装。
+下载包版本是 **v2.1**，技能调用名称是 **`$paper-to-html-v2.1`**。GitHub 更新不会自动更新电脑上的安装。
 
 ### 2 · 提供论文并调用
 
 ```text
-$paper-to-html-v2
+$paper-to-html-v2.1
 把这篇论文做成中文共读网页。
 完整翻译核心正文，逐面板解释全部主图，并讲清全文论证。
 ```
@@ -83,7 +83,7 @@ $paper-to-html-v2
 ```sh
 git clone https://github.com/BerryIcey/paper-to-html.git
 cd paper-to-html
-python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root demo --port 18765
+python skills/paper-to-html-v2.1/assets/reader-components/reading_server.py --root demo --port 18765
 ```
 
 在同一台设备打开 `http://127.0.0.1:18765/paper-reading.html`。这只是临时演示服务；正式项目需要配置独立后台运行方式。
@@ -100,7 +100,7 @@ python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root
 
 **v2.2 正在本地测试，尚未公开发布。** 它增加本科读者起点筛选及进一步跨领域适配；这些改动不包含在 v2.1 下载包中。Skill 版本与某篇论文网页自己的版本号分别管理。
 
-[v2.1 校验文件](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.sha256) · [版本差异](https://github.com/BerryIcey/paper-to-html/compare/v2.0.2...v2.1)。不要混用不同版本的参考文件。[个人 Skill 库](https://github.com/BerryIcey/my-skills)保留项目入口。
+[v2.1 校验文件](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.sha256) · [版本差异](https://github.com/BerryIcey/paper-to-html/compare/v2.0.2...v2.1)。不要混用不同版本的参考文件。[个人 Skill 库](https://github.com/BerryIcey/my-skills)保留项目入口。
 
 ## 使用前需要知道
 
