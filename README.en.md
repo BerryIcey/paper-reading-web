@@ -6,7 +6,7 @@
 
 ### A paper walkthrough you can follow
 
-Read the text. Understand each figure. Look up a term and return to your place.
+Read each figure. Clarify unfamiliar concepts. Follow the whole argument.
 
 [![Recommended v2.1](https://img.shields.io/badge/Recommended-v2.1-2f6354?style=flat-square)](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1)
 [![MIT](https://img.shields.io/badge/License-MIT-657b72?style=flat-square)](LICENSE)
@@ -15,31 +15,43 @@ Read the text. Understand each figure. Look up a term and return to your place.
 
 </div>
 
-## See the reading experience
+## Three core reading experiences
 
-Switch the figure and explanation together. Understand what each element represents before deciding what the evidence supports.
+The illustrations use original demo text and simulated charts. They show the interface and reading approach, not findings from a real paper. The English demo is separate; the released Skill remains Chinese-first.
 
-![Synchronized figure and explanation](docs/images/en-figure-reader.png)
+### 01 · Figure walkthroughs: read the evidence step by step
 
-<details>
-<summary>Show the overview and notes panel</summary>
+Each main figure has an overview and explanations for its individual panels. Switching panels changes the image and its explanation together; zoom helps inspect labels and details.
 
-![Reading overview](docs/images/en-reader-overview.png)
-![Notes panel](docs/images/en-notes-bookmark.png)
+A walkthrough starts with **why this comparison is needed, who or what is compared, and how the input becomes a plotted element**. It then maps axes, colors, symbols and units to their meanings, reads a specific visible observation, and explains how that observation supports a conclusion. The final step identifies what was answered and what remains open.
 
-</details>
+This goes beyond a caption or “significant difference.” Captions, translations, short findings and detailed explanations have different roles. The reader should be able to reconstruct the comparison and inference.
 
-[Download the English demo HTML](https://raw.githubusercontent.com/BerryIcey/paper-to-html/main/demo/en/paper-reading.html), save it, and open it in a browser. The demo uses original text and simulated data. GitHub's HTML file page shows source code. Saving project notes requires a local service. This separate English demo does not promise a fully English-localized generation workflow; the released Skill is Chinese-first.
+![A figure with its synchronized explanation](docs/images/en-figure-reader.png)
 
-## What you get
+*The demo identifies groups and scale before reading the bar heights. An actual paper needs its own labels, observations and evidence checks.*
 
-| Read the text | Read the evidence | Look up and keep notes |
-|---|---|---|
-| Continuous source and core translations | All main panels with guided explanations | Colored terms and knowledge cards |
-| Clear findings and detailed reasoning | Questions, legends, observations and inference | Return to the previous reading position |
-| Argument map and closing assessment | Explicit evidence limits | Highlighting, zoom and queued notes |
+### 02 · Knowledge cards: clarify a concept and keep your place
 
-This repository provides a **Codex Skill and HTML reader components**. It guides an assistant; it is not a standalone system that automatically understands arbitrary papers. Generated explanations need source review.
+Lookup links in the text and captions open cards for unfamiliar concepts that matter to understanding. A useful card explains **what the concept is, how it works or relates to others, why the paper uses it, and where interpretation needs care**. Expanding an abbreviation alone is insufficient.
+
+Concepts are discovered in the current paper rather than limited to an existing vocabulary list. Ambiguous names need context; related concepts need an explicit connection. After a temporary lookup, return to the previous panel and reading position.
+
+![A knowledge card explaining the reference for a comparison](docs/images/en-knowledge-cards.png)
+
+*“Control” demonstrates the interaction; it is not a mandatory term for every audience. Excessive basic explanations remain a focus of v2.2 testing.*
+
+### 03 · The argument map: understand why each step follows
+
+Knowing each figure is not enough to understand the whole paper. The argument map connects **what is known → what is missing → why this approach helps → how the result changes the interpretation**. A flow diagram locates the steps; detailed explanations justify their connections.
+
+It is not a list of figure titles or a chain of unexplained terms. Parallel evidence, negative findings, supporting checks and open branches should remain visible. Research order alone does not establish chronology or causation.
+
+![An argument map connecting a question, observation and next step](docs/images/en-argument-chain.png)
+
+*The simulated difference motivates questions about stability and cause. Those questions explain the next step, rather than “another experiment” serving as a transition.*
+
+[Download the English demo HTML](https://raw.githubusercontent.com/BerryIcey/paper-to-html/main/demo/en/paper-reading.html), save it, and open it in a browser. GitHub's HTML file page displays source code. This repository provides a **Codex Skill and reader components**; generated explanations still need source review.
 
 ## Start in three steps
 
@@ -98,6 +110,20 @@ Open `http://127.0.0.1:18765/paper-reading.html` on the same machine. This is a 
 - **Persistence:** Project notes need the local service. Automatic offline retry, cross-device sync and instant model responses are not implemented.
 - **Access:** `127.0.0.1` is local to each device. Offline reading on a phone does not connect it to a computer's loopback server.
 - **Versions and background services:** Projects can keep zero, one or two historical copies in addition to the latest. Background startup differs by operating system; actual restart survival requires separate verification.
+
+## Additional reading tools
+
+Understanding the paper comes first. These tools support lookup, annotation and follow-up:
+
+| Tool | What it does |
+|---|---|
+| Legend and term colors | Explain webpage term categories and toggle their backgrounds; original figure colors are interpreted separately |
+| Highlighter | Explicitly enable highlighting and undo marks; term colors and personal highlights have independent controls |
+| Notes | Save text or screenshots in the local paper project for a later assistant session |
+
+![Supporting tools: highlighter, legend and notes](docs/images/en-reading-tools.png)
+
+Project notes require the local service. Browser drafts are a separate store, and saving a note does not trigger an instant GPT response. Zoom, panel switching and lookup return also support reading.
 
 ## Help improve it
 
