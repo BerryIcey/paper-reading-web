@@ -2,94 +2,72 @@
 
 **[简体中文](README.md) · English**
 
-![paper-to-html](docs/images/cover.svg)
+![paper-to-html — Read, understand, keep your questions](docs/images/cover.svg)
 
-**Turn research papers into interactive, explained HTML reading guides.**
+### A paper walkthrough you can follow
 
-A reusable **Codex Skill + HTML reader toolkit** for Chinese-first, source-faithful paper explanations.
+Read the text. Understand each figure. Look up a term and return to your place.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-35644d.svg)](LICENSE)
-[![Recommended: v2.1](https://img.shields.io/badge/Recommended-v2.1-35644d.svg)](skills/paper-to-html-v2/SKILL.md)
+[![Recommended v2.1](https://img.shields.io/badge/Recommended-v2.1-2f6354?style=flat-square)](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1)
+[![MIT](https://img.shields.io/badge/License-MIT-657b72?style=flat-square)](LICENSE)
 
-[Download v2.1](https://github.com/BerryIcey/paper-to-html/releases/latest) · [Read the Skill](skills/paper-to-html-v2/SKILL.md) · [See the demo](#see-it-in-action) · [Report an issue](https://github.com/BerryIcey/paper-to-html/issues)
+**[Download v2.1](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip) · [Read the Skill](https://github.com/BerryIcey/paper-to-html/tree/v2.1/skills/paper-to-html-v2/SKILL.md) · [Release notes](docs/v2.1-changes.md) · [Report an issue](https://github.com/BerryIcey/paper-to-html/issues)**
 
 </div>
 
-## Why this project exists
+## See the reading experience
 
-A paper explanation can contain plenty of text and still leave the reader guessing: What does this point represent? Higher than which group? Why did the authors perform the next experiment?
+Switch the figure and explanation together. Understand what each element represents before deciding what the evidence supports.
 
-This project turns useful conversational teaching practices into a repeatable workflow:
-
-**Question → comparison design → actual observation → reasoning → supported conclusion → remaining question.**
-
-The reader components reduce the friction of switching figure panels, looking up unfamiliar terms, and finding your place afterward.
-
-This is a Skill that guides Codex in creating a paper-reading website, together with working components and validation scripts. It is not a standalone system that automatically understands arbitrary PDFs. Generated scientific explanations still require review.
-
-## See it in action
-
-The demo uses original explanatory text and invented chart values. It contains no real paper, private notes, or author datasets. The English feature demo omits translation blocks and highlights figure explanations, argument transitions, knowledge lookups, highlighting, and notes. It is a separate illustrative interface; the default Skill workflow remains Chinese-first.
-
-![Synchronized figure and explanation panels](docs/images/en-figure-reader.png)
+![Synchronized figure and explanation](docs/images/en-figure-reader.png)
 
 <details>
-<summary>Show the reading overview and notes panel</summary>
+<summary>Show the overview and notes panel</summary>
 
 ![Reading overview](docs/images/en-reader-overview.png)
-![Collapsible notes panel](docs/images/en-notes-bookmark.png)
+![Notes panel](docs/images/en-notes-bookmark.png)
 
 </details>
 
-[Download the demo HTML](demo/en/paper-reading.html) and open it in a browser. GitHub displays its source rather than running it. The static file supports panel switching, zooming, knowledge cards, and returning to your previous position. Saving project notes requires the local service described below.
+[Download the English demo HTML](https://raw.githubusercontent.com/BerryIcey/paper-to-html/main/demo/en/paper-reading.html), save it, and open it in a browser. The demo uses original text and simulated data. GitHub's HTML file page shows source code. Saving project notes requires a local service. This separate English demo does not promise a fully English-localized generation workflow; the released Skill is Chinese-first.
 
-## Features
+## What you get
 
-| Reading task | What the project provides |
-|---|---|
-| Understand the text | Continuous source text, complete translations of the core sections, clear conclusions, and detailed explanations |
-| Read each figure panel | Figure overviews and every main panel, with captions, translations, explicit legend mappings, and guided observations |
-| Follow the research argument | An argument map explaining why each result leaves a question and why the next method addresses it |
-| Evaluate the paper | A closing reader assessment covering contributions, credible findings, limitations, and another perspective |
-| Look up terminology | Centered knowledge cards and an exact return to the previous panel and scroll position |
-| Read comfortably | Side-by-side figures and independently scrolling explanations, with responsive panel switching |
-| Annotate | An explicit highlighter toggle, undo, and a separate toggle for term category colors |
-| Queue questions | A draggable edge bookmark and notes/screenshots saved to the paper project for the next assistant session |
-| Keep versions manageable | One fixed latest desktop copy, plus the current release and zero, one, or two historical backups in the project |
+| Read the text | Read the evidence | Look up and keep notes |
+|---|---|---|
+| Continuous source and core translations | All main panels with guided explanations | Colored terms and knowledge cards |
+| Clear findings and detailed reasoning | Questions, legends, observations and inference | Return to the previous reading position |
+| Argument map and closing assessment | Explicit evidence limits | Highlighting, zoom and queued notes |
 
-The default output covers the complete first-reading core. Full Methods references, supplementary figure walkthroughs, quizzes, and other extensions are generated only when selected.
+This repository provides a **Codex Skill and HTML reader components**. It guides an assistant; it is not a standalone system that automatically understands arbitrary papers. Generated explanations need source review.
 
-Content follows four zones: **core article → knowledge → advanced article content → advanced knowledge**. The closing reader assessment is required in the initial output even though it belongs to the last zone. Zone names do not determine which modules are optional.
+## Start in three steps
 
-## Quick start
+### 1 · Install the recommended release
 
-### 1. Install v2
+Download [paper-to-html-v2-v2.1.zip](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip). Place its complete `paper-to-html-v2` folder in your configured Codex Skill directory, commonly `~/.codex/skills/`. Back up an existing installation outside that directory first, then start a new chat to confirm discovery.
 
-Download `paper-to-html-v2.zip` from [Releases](https://github.com/BerryIcey/paper-to-html/releases/latest). Extract it and place the complete `paper-to-html-v2` folder in your configured Codex user Skill directory, commonly `~/.codex/skills/`. Confirm that the Skill is available in the next turn or a new chat.
+The release is **v2.1**; the invocation remains **`$paper-to-html-v2`**. Repository updates do not automatically update installed copies.
 
-Alternatively, clone this repository and copy `skills/paper-to-html-v2/`. If you already have an older installation, back it up outside the Skill discovery directory to avoid both versions being selected automatically. Repository updates do not automatically update installed copies on other devices.
-
-### 2. Give Codex a paper
+### 2 · Provide a paper
 
 ```text
 $paper-to-html-v2
-Create a core Chinese HTML walkthrough of this paper.
-Explain every main figure panel and review the text explanations,
-figure walkthroughs, and argument map against the Skill.
-Keep the same teaching detail throughout the paper.
+Create a Chinese HTML walkthrough of this paper.
+Translate the core text, explain every main figure panel,
+and show how the paper's argument develops.
 ```
 
-Provide a PDF you are entitled to use. The assistant builds a fresh source/evidence ledger and panel inventory for that paper; it must not reuse scientific facts or numbers from the demo or another paper. Missing sources or supplementary materials should be disclosed.
+Use a PDF you are entitled to provide. The default includes the core text, main figures, necessary knowledge cards and a closing assessment. Detailed Methods references, supplementary walkthroughs and quizzes can be requested separately. Missing source materials should be disclosed.
 
-### 3. Read and continue
+### 3 · Read and continue
 
-Use the fixed latest desktop HTML for routine reading. Open the paper's local reader when you want to save questions. Notes are stored in the project and read by the assistant in a later session; **they do not trigger an immediate GPT response**.
+The static HTML supports offline panel switching, zoom, cards and highlighting. Open the paper's local service to save project notes for a later assistant session. Notes **do not trigger an instant GPT response**. Browser drafts and project notes are separate stores.
 
-On the first local launch, choose overwrite mode or one/two historical backups. The offline HTML displays the policy at export time; the project settings file is authoritative. If you postpone the choice, a timestamped working copy can still be delivered without deleting history.
+<details>
+<summary>Try the components without a model</summary>
 
-## Try the components without a model
-
-Run the local service for the synthetic demo:
+Requires Python, but no OpenAI API key:
 
 ```sh
 git clone https://github.com/BerryIcey/paper-to-html.git
@@ -97,38 +75,34 @@ cd paper-to-html
 python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root demo/en --port 18765
 ```
 
-Open `http://127.0.0.1:18765/paper-reading.html`. This is a temporary demo server. For a persistent paper project, follow the Skill's independent background-service instructions. The project queue stays on your machine and does not require an OpenAI API key.
+Open `http://127.0.0.1:18765/paper-reading.html` on the same machine. This is a temporary demo service; paper projects need a suitable independent background service.
 
-## Versions and updates
+</details>
 
-| Version | Skill directory | Purpose |
+## Versions
+
+| Version | Status | What it contains |
 |---|---|---|
-| v1.0.0 | [paper-reading-web](skills/paper-reading-web/SKILL.md) | Preserved original snapshot for comparison and rollback |
-| v2.0.2 | [Historical snapshot](https://github.com/BerryIcey/paper-to-html/tree/v2.0.2/skills/paper-to-html-v2) | Previous release with unified rules and corrected publication/settings behavior |
-| **v2.1** | [paper-to-html-v2](https://github.com/BerryIcey/paper-to-html/tree/v2.1/skills/paper-to-html-v2) | **Latest recommended release**: complete panel teaching contract, adaptive concept discovery and knowledge cards, lookup links in source text and captions |
+| **v2.1** | **Latest recommended · Released** | [Download](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1) · [Change report](docs/v2.1-changes.md): complete panel explanation requirements, adaptive concepts and knowledge cards, lookup links in source text and captions |
+| v2.0.2 | Historical | [Snapshot](https://github.com/BerryIcey/paper-to-html/tree/v2.0.2) · [Earlier changes](docs/v2-changes.md) |
+| v1.0.0 | Original | [Snapshot](https://github.com/BerryIcey/paper-to-html/tree/v1.0.0), retained for comparison and rollback |
 
-v1 retains its original instructions, including rules superseded by v2. Do not mix reference files from the two versions. Future development is maintained here; the personal Skill library links to this project rather than distributing replacement copies.
+**v2.2 is under local testing and has not been publicly released.** Its undergraduate reader baseline and further cross-domain adaptations are not included in the v2.1 package. Skill versions and individual paper-reader versions are independent.
 
-Download v2.1: [Skill ZIP](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip) · [SHA-256](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.sha256) · [v2.1 change report](docs/v2.1-changes.md).
+[v2.1 checksum](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.sha256) · [Compare versions](https://github.com/BerryIcey/paper-to-html/compare/v2.0.2...v2.1). Do not mix reference files from different versions.
 
-See the [v2 change notes](docs/v2-changes.md), currently in Chinese. Each downloadable ZIP contains one Skill root folder and has a SHA-256 checksum. The Skill version and an individual paper's HTML release number are independent.
+## Practical limits
 
-## Requirements and limitations
+- **Environment:** A Skill-capable assistant with PDF access; Python for components and services, PyMuPDF for figure crops, and Node.js for JavaScript checks.
+- **Review:** Translations, labels, numbers and inferences need source checks. Passing tests does not establish scientific accuracy, comprehension or coverage of every discipline.
+- **Persistence:** Project notes need the local service. Automatic offline retry, cross-device sync and instant model responses are not implemented.
+- **Access:** `127.0.0.1` is local to each device. Offline reading on a phone does not connect it to a computer's loopback server.
+- **Versions and background services:** Projects can keep zero, one or two historical copies in addition to the latest. Background startup differs by operating system; actual restart survival requires separate verification.
 
-- Producing a full paper walkthrough requires a Skill-capable assistant, PDF-reading capabilities, and suitable image tools. The reader, assembler, publisher, and local server use the Python standard library. The PDF crop renderer requires PyMuPDF; JavaScript syntax checks use Node.js.
-- Source text, translations, statistics, legends, and scientific reasoning must be reviewed unit by unit. Passing structural tests does not establish scientific correctness or reader comprehension.
-- The static reader does not depend on a CDN. Highlights and drafts are stored in the browser; submitted notes and settings are stored in the project. Automatic retry of offline submissions, cross-device synchronization, and instant GPT chat are not implemented.
-- The loopback server is accessible from the same machine only. Reading an offline HTML on a phone does not let that phone submit notes to a computer's `127.0.0.1`. Remote access requires a separately configured secure service.
-- The Windows persistence approach uses a current-user scheduled task and a supervisor. Other platforms need an appropriate background-service mechanism. Crash recovery and survival of an actual application restart are separate checks.
-- The current Skill and generated reader are Chinese-first. This README makes the project accessible to English-speaking readers; it does not promise a fully English-localized workflow.
-- Code and general workflow documentation are MIT-licensed. User-supplied papers, third-party images, and generated paper-specific content retain their applicable rights and usage conditions. They are not distributed by this repository.
+## Help improve it
 
-## Contribute
+[Report an issue](https://github.com/BerryIcey/paper-to-html/issues) with the version, browser, expected and observed behavior. For explanation problems, identify the object, comparison or inference that remains unclear.
 
-Useful reports include the version, operating system/browser, expected behavior, observed behavior, reproduction steps, and a minimal screenshot you can share publicly. For teaching issues, identify which object, comparison, inference, or transition remains unclear.
+Current priorities: missed specialist concepts, excessive basic explanations, consistent quality across long papers, touch interaction and different forms of argument. Do not upload private notes, credentials or paper full texts without permission.
 
-Please do not upload private notes, account details, or paper full texts without permission.
-
-Priorities include understandable reasoning for first-time readers, consistent detail across large outputs, real touchscreen behavior, and legend conventions across disciplines.
-
-If this helps you understand a paper, a Star is appreciated. Even more useful is telling us where the explanation still makes you guess.
+Code and general documentation use the [MIT license](LICENSE). Papers and third-party images retain their applicable rights; user papers are not distributed here.

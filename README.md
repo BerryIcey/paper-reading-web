@@ -2,89 +2,71 @@
 
 **简体中文 · [English](README.en.md)**
 
-![paper-to-html](docs/images/cover.svg)
+![paper-to-html — 阅读、理解、留下问题](docs/images/cover.svg)
 
-**把研究论文变成可交互、带讲解的 HTML 阅读指南。**
+### 把论文变成一份能跟着读的网页
 
-Turn research papers into interactive, explained HTML reading guides.
+连续读正文，逐图看证据，查完术语回到原处。
 
-A reusable **Codex Skill + HTML reader toolkit** for source-faithful, panel-by-panel paper walkthroughs.
+[![推荐 v2.1](https://img.shields.io/badge/推荐版本-v2.1-2f6354?style=flat-square)](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1)
+[![MIT](https://img.shields.io/badge/License-MIT-657b72?style=flat-square)](LICENSE)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-35644d.svg)](LICENSE)
-[![Language: Chinese](https://img.shields.io/badge/Reading-Chinese%20first-6d8265.svg)](#能做什么)
-[![Current: v2.1](https://img.shields.io/badge/Recommended-v2.1-35644d.svg)](skills/paper-to-html-v2/SKILL.md)
-
-[下载 v2.1](https://github.com/BerryIcey/paper-to-html/releases/latest) · [查看 Skill](skills/paper-to-html-v2/SKILL.md) · [体验演示](#先看效果) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)
+**[下载 v2.1](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip) · [查看技能](https://github.com/BerryIcey/paper-to-html/tree/v2.1/skills/paper-to-html-v2/SKILL.md) · [更新说明](docs/v2.1-changes.md) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)**
 
 </div>
 
-## 为什么做这个项目
+## 先看阅读体验
 
-论文讲解常见的问题不是没有文字，而是读者还得自己猜：这个点代表谁？高低相对哪组？为什么做下一项实验？
+图和解释同步切换。先弄清“图里的一个点是什么”，再读它能支持什么结论。
 
-这个项目把逐问逐答中有效的讲法做成可复用规范：**问题 → 比较设计 → 真实观察 → 中间推理 → 能支持的结论 → 下一缺口**。网页组件则解决来回翻页、逐图切换、查术语后找不到阅读位置等问题。
-
-它是一套让 Codex 制作阅读网页的 Skill，并配有真实组件与检查脚本。它不会脱离助手自动读懂任意PDF，也不保证生成内容免审查。
-
-## 先看效果
-
-下面使用原创演示文字与模拟图表，不包含真实论文或私人阅读记录。
-
-![逐面板阅读：左图右文，同步切换](docs/images/figure-reader.png)
+![逐图阅读：原图与解释并排](docs/images/figure-reader.png)
 
 <details>
-<summary>查看全文入口与随手记界面</summary>
+<summary>展开查看全文入口和随手记</summary>
 
-![全文入口](docs/images/reader-overview.png)
+![正文阅读入口](docs/images/reader-overview.png)
 ![侧边随手记](docs/images/notes-bookmark.png)
 
 </details>
 
-[下载并打开演示 HTML](demo/paper-reading.html)。在仓库里点击 HTML 是源码预览；下载后用浏览器打开。静态演示可切图、缩放、查卡和返回；项目笔记需要启动本地服务。
+[下载演示 HTML](https://raw.githubusercontent.com/BerryIcey/paper-to-html/main/demo/paper-reading.html)，保存后用浏览器打开。演示使用原创文字和模拟数据。GitHub 的 HTML 文件页显示源码，不会直接运行网页；保存项目笔记需要本地服务。
 
-## 能做什么
+## 阅读时，你能得到什么
 
-| 阅读需要 | 输出/交互 |
-|---|---|
-| 读正文 | 连续原文、核心完整翻译、明确结论、自然详细解释 |
-| 读每个小图 | 总览 + 全部主图面板，图注/翻译/局部图例/真实数据带读 |
-| 跟上作者的问题 | 全文论证链与流程框图，解释上一结果为何不够 |
-| 超出作者叙事 | 文末独立读者评议：创新、可信结论、局限与另一视角 |
-| 查陌生词 | 术语卡居中展开，临时查阅后精确返回原面板和滚动位置 |
-| 保持阅读流畅 | 左图右文、独立文字滚动、手机/平板面板切换 |
-| 做个人标记 | 显式荧光笔开关、撤销、独立术语纯净模式 |
-| 保存下轮问题 | 右侧可拖动书签，文字/截图写项目队列，下轮助手读取 |
-| 管理交付 | 桌面固定最新版，项目保留当前版 + 0/1/2 个历史备份 |
+| 读正文 | 读图与证据 | 查阅与记录 |
+|---|---|---|
+| 连续原文与核心完整翻译 | 主图总览和逐面板讲解 | 彩色术语与知识卡 |
+| 明确结论和连贯解释 | 当前问题、图例、实际观察与推理 | 查阅后返回原位置 |
+| 全文论证链与文末评议 | 区分观察、推断和未解决问题 | 荧光笔、缩放、随手记 |
 
-首次默认生成完整核心；独立Methods、附图详解、复习等按需选择。区域顺序为基础文章、知识、进阶内容、进阶知识；文末读者评议默认必需。不要把“进阶知识区”误解成其中所有内容都可选。
+这是供 Codex 使用的 **Skill 与网页阅读组件**。生成内容需要核对来源；它不是脱离助手独立运行的自动论文分析器。
 
-## 快速开始
+## 三步开始
 
-### 1. 安装 v2
+### 1 · 安装推荐版
 
-从 [Releases](https://github.com/BerryIcey/paper-to-html/releases/latest) 下载 `paper-to-html-v2.zip`，解压后把完整 `paper-to-html-v2` 文件夹放到 Codex 用户 Skill 目录中（通常为 `~/.codex/skills/`，以当前环境配置为准）。下一轮或新聊天确认 Skill 可用。
+下载 [paper-to-html-v2-v2.1.zip](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip)，解压后将其中完整的 `paper-to-html-v2` 文件夹放进当前设备的 Codex Skill 目录，通常是 `~/.codex/skills/`。已有旧安装时先在技能目录外备份。新开聊天确认技能可用。
 
-也可以克隆本仓库，复制 `skills/paper-to-html-v2/`。若已有旧安装，先在 Skill 扫描目录之外保留备份，避免两套名称同时自动匹配。GitHub 更新不会自动同步各设备安装。
+下载包版本是 **v2.1**，技能调用名称仍是 **`$paper-to-html-v2`**。GitHub 更新不会自动更新电脑上的安装。
 
-### 2. 给 Codex 一篇论文
+### 2 · 提供论文并调用
 
 ```text
 $paper-to-html-v2
-把这篇论文做成基础版HTML共读网页，所有主图逐面板讲清楚。
-请按照Skill检查正文解析、读图与全文论证链，不压缩后半部分。
+把这篇论文做成中文共读网页。
+完整翻译核心正文，逐面板解释全部主图，并讲清全文论证。
 ```
 
-提供有权使用的PDF。助手会重新建立本文证据台账和图清单，不继承演示或上一论文的数据。缺来源/补充材料会说明范围。
+提供有权使用的 PDF。默认包含核心正文、全部主图、必要知识卡与文末评议；独立方法细节、附图详解和复习内容可按需追加。缺少补充资料时，助手应说明实际覆盖范围。
 
-### 3. 阅读与继续
+### 3 · 阅读并留下问题
 
-日常看桌面同名最新版。需要随手记时打开当前论文的本地阅读服务；问题写项目，由下一轮助手读取处理，**不是点击后即时GPT回复**。
+静态 HTML 可离线切图、放大、查卡和标记。要保存随手记，请打开该论文的本地阅读服务；问题保存到项目，供下一轮助手处理，**不会即时调用 GPT**。正文与笔记、浏览器草稿与项目文件是不同的保存内容。
 
-首次本地启动选择覆盖或1/2个历史备份。离线HTML只展示导出时的策略，设置修改以项目文件为准。未选择仍可交付带时间标签的工作版，不删除历史。
+<details>
+<summary>只想体验组件？启动演示服务</summary>
 
-## 只体验组件
-
-下面不需要模型，运行原创演示的本地服务：
+不需要模型或 OpenAI API 密钥。需要 Python：
 
 ```sh
 git clone https://github.com/BerryIcey/paper-to-html.git
@@ -92,39 +74,34 @@ cd paper-to-html
 python skills/paper-to-html-v2/assets/reader-components/reading_server.py --root demo --port 18765
 ```
 
-打开 `http://127.0.0.1:18765/paper-reading.html`。这是临时演示服务；正式文献项目按维护规范配置独立后台。项目队列在本机保存，不需要OpenAI API密钥。
+在同一台设备打开 `http://127.0.0.1:18765/paper-reading.html`。这只是临时演示服务；正式项目需要配置独立后台运行方式。
 
-## 版本与更新
+</details>
 
-| 版本 | 路径 | 用途 |
+## 选择哪个版本
+
+| 版本 | 状态 | 内容与入口 |
 |---|---|---|
-| v1.0.0 | [paper-reading-web](skills/paper-reading-web/SKILL.md) | 定稿前原始快照，独立保留、用于对比 |
-| v2.0.2 | [历史快照](https://github.com/BerryIcey/paper-to-html/tree/v2.0.2/skills/paper-to-html-v2) | 旧版：统一规则及发布设置修复 |
-| **v2.1** | [paper-to-html-v2](https://github.com/BerryIcey/paper-to-html/tree/v2.1/skills/paper-to-html-v2) | **最新推荐版**：完整逐面板带读契约、自适应概念发现与知识卡、原文及图注查阅入口 |
+| **v2.1** | **最新推荐 · 已发布** | [下载](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1) · [更新报告](docs/v2.1-changes.md)：完整逐图讲解要求、自适应术语与知识卡、原文和图注查阅入口 |
+| v2.0.2 | 历史版 | [查看快照](https://github.com/BerryIcey/paper-to-html/tree/v2.0.2) · [早期变更](docs/v2-changes.md) |
+| v1.0.0 | 原始版 | [查看快照](https://github.com/BerryIcey/paper-to-html/tree/v1.0.0)，用于对照和回退 |
 
-v1保留当时内容，包含已经被v2替代的规则；不要混合使用两个版本的参考文件。未来更新集中在本项目，[个人Skill库](https://github.com/BerryIcey/my-skills)只保留项目入口。
+**v2.2 正在本地测试，尚未公开发布。** 它增加本科读者起点筛选及进一步跨领域适配；这些改动不包含在 v2.1 下载包中。Skill 版本与某篇论文网页自己的版本号分别管理。
 
-v2.1 下载：[完整技能包](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.zip) · [SHA-256](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.sha256) · [v2.1 更新报告](docs/v2.1-changes.md)。
+[v2.1 校验文件](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2-v2.1.sha256) · [版本差异](https://github.com/BerryIcey/paper-to-html/compare/v2.0.2...v2.1)。不要混用不同版本的参考文件。[个人 Skill 库](https://github.com/BerryIcey/my-skills)保留项目入口。
 
-详细差异见 [v2 变更说明](docs/v2-changes.md)。下载包各自只有一个技能根目录，并提供SHA-256校验。Skill的v2与某篇文章的交付版本号互相独立。
+## 使用前需要知道
 
-## 依赖与限制
+- **制作环境：** 支持 Skill 的助手和 PDF 读取能力；组件与服务使用 Python 标准库，PDF 裁图需要 PyMuPDF，脚本语法检查使用 Node.js。
+- **核对范围：** 翻译、图例、数值与推理需要逐项核对。测试通过不证明解释全部正确，也不证明所有领域都已验证。
+- **保存边界：** 正文可离线阅读；项目笔记依赖本地服务。目前没有断线自动补存、跨设备同步或即时问答。
+- **设备访问：** `127.0.0.1` 只供本机使用。手机能读离线文件，不代表能连接电脑的本地地址提交笔记。
+- **后台与历史：** 正式项目可保留 0/1/2 个历史备份，最新版另计；Windows 后台方案与其他系统不同，重启存活需另行验证。
 
-- 制作完整论文网页需要支持 Skill 的助手、可读取PDF的环境和必要图像工具。组件、装配、发布及本地服务脚本使用 Python 标准库；PDF矢量裁图脚本需 PyMuPDF。运行语法检查需 Node.js。
-- 原文翻译、统计、图例和科学判断必须逐单元核对；结构测试通过不证明用户理解或事实完全正确。
-- 静态全文不依赖CDN；个人标黄及草稿存浏览器，服务端随手记/设置存项目。当前未实现断线自动补存、跨设备同步或即时GPT问答。
-- loopback只供同一台设备访问。手机离线切图可用，不代表手机能提交到电脑的127.0.0.1；安全网络发布需另行配置。
-- Windows独立后台方案使用当前用户任务与守护程序；其他平台需选适用运行方式。自动恢复与真正重启存活分别验证。
-- 软件代码与通用规范使用MIT许可。用户提供论文、第三方图片和生成的论文内容仍受其原有权利及使用条件约束，本仓库不分发它们。
+## 一起改善阅读效果
 
-## 帮助它变好
+[提交问题](https://github.com/BerryIcey/paper-to-html/issues)时请写明版本、浏览器、期望行为与实际情况。解释不清楚时，指出卡在哪个对象、比较或推理步骤，比只说“太简略”更有帮助。
 
-欢迎提交真实的可复现问题：哪个版本、哪类图、期望行为、实际表现，以及可公开的最小截图。请不要上传私人笔记、账号信息或未经许可的论文全文。
+当前关注：专门术语漏选与基础知识过选、长论文后半部分讲解质量、触控操作，以及不同论证方式的迁移。请勿上传私人笔记、凭据或未经许可的论文全文。
 
-优先改进方向：首次读者能否复述比较与理由、全量生成后半部分是否降质、触控实际操作、不同学科图例适配。
-
-如果这个工具帮你读懂了一篇论文，欢迎 Star；更有用的是告诉我们哪一处解释仍然让你需要猜。
-
----
-
-**English:** This repository provides versioned Codex Skills and reusable HTML reader components for Chinese-first research-paper walkthroughs. It emphasizes complete core text translation, local legend mapping, real-observation reasoning, explicit argument transitions and evidence limits. The demo is synthetic; no private notes or full papers are included. Local notes are queued for a later assistant session, not sent to an instant model API.
+代码与通用说明使用 [MIT 许可](LICENSE)。论文及第三方图片沿用原有权利条件，仓库不分发用户论文。

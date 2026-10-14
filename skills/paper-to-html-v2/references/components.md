@@ -1,12 +1,12 @@
-# 固定组件与装配契约
+# 固定组件与页面装配要求
 复用assets/reader-components中的shell.html、reader.css、reader.js、reading_server.py和reader_supervisor.py。论文专属文字、图片、术语映射与路径不烘焙进通用组件。交互和排版的唯一规范见page-and-navigation.md，数据/发布见maintenance.md；不要重新设计或从历史附录挑旧规则。
 
 ## 教学内容装配
 术语发现和卡片解释遵循adaptive-concepts.md；审核后保存本文概念清单。可用build_reader.py的`--concepts 本文清单.json --concept-report 内部匹配报告.json`调用concept_markup.py，或用其mark_concepts函数处理正文。匹配器只链接文本节点，不发现概念、不生成卡片、不证明覆盖/理解；卡片目标必须先存在。作用于原文、译文、图注及解释的自然段，不把入口限制到解释段。语境歧义用scope_ids或人工标注解决，不套固定全篇词库。卡内关系链接由写作者明确组织，不自动密集标色。
 
-新面板的正文讲解按[带读契约](panel-teaching-contract.md)保存，调用`scripts/teaching_contract.py`的`render_teaching`。`data-reader-teaching`内部包含`data-teaching-role="question"/"legend"/"reasoning"/"next"`，题注、译文和唯一结论仍放在之前。两个自然解释区域均须展开为自然段，局部图例用表格；不是把短explain切成几个空标题。新面板缺块时build/publish拒绝交付。旧版已认可布局保留，维护时核对同等语义内容。
+新面板的正文讲解按[逐图讲解要求](panel-teaching-contract.md)保存，调用`scripts/teaching_contract.py`的`render_teaching`。`data-reader-teaching`内部包含`data-teaching-role="question"/"legend"/"reasoning"/"next"`，题注、译文和唯一结论仍放在之前。两个自然解释区域均须展开为自然段，局部图例用表格；不是把短explain切成几个空标题。新面板缺块时build/publish拒绝交付。旧版已认可布局保留，维护时核对同等语义内容。
 
-## HTML契约
+## HTML结构说明
 每篇唯一稳定data-paper-id；所有id全局唯一且续改稳定。主章节section[data-section]和data-reading-tier使用core/knowledge/advanced/advanced-knowledge，顺序对应四区，目录及笔记选项从实际DOM生成。
 每主图data-reader-figure有整图与所有子图tab，每面板data-reader-panel有独立图片和reader-text。tab同时切图/文；reader-text有稳定id保存滚动。知识卡data-reader-card；整组data-reader-card-group。临时跳非卡片目的地须在链接加data-reader-return，普通章节链接不加。
 data-highlight-block放不嵌套叶级块（p/li/td），每块稳定id；不要同时标section和内部p。术语a.term.term-category链接实际卡，不加角标。模板仅结构示意，真实网页不得保留占位图、示意内容或缺面板。
