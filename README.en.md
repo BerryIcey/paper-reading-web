@@ -17,7 +17,7 @@ Read each figure. Clarify unfamiliar concepts. Follow the whole argument.
 
 ## Three core reading experiences
 
-The illustrations use original demo text and simulated charts. They show the interface and reading approach, not findings from a real paper. The English demo is separate; the released Skill remains Chinese-first.
+The consistent-ratio feature illustrations explain the reading approach and interactions. They are not exact UI screenshots; simulated values are not findings from a real paper. The English demo is separate; the released Skill remains Chinese-first.
 
 ### 01 · Figure walkthroughs: read the evidence step by step
 
@@ -27,7 +27,7 @@ A walkthrough starts with **why this comparison is needed, who or what is compar
 
 This goes beyond a caption or “significant difference.” Captions, translations, short findings and detailed explanations have different roles. The reader should be able to reconstruct the comparison and inference.
 
-![A figure with its synchronized explanation](docs/images/en-figure-reader.png)
+![A figure with its synchronized explanation](docs/images/en-figure-walkthrough.svg)
 
 *The demo identifies groups and scale before reading the bar heights. An actual paper needs its own labels, observations and evidence checks.*
 
@@ -37,7 +37,7 @@ Lookup links in the text and captions open cards for unfamiliar concepts that ma
 
 Concepts are discovered in the current paper rather than limited to an existing vocabulary list. Ambiguous names need context; related concepts need an explicit connection. After a temporary lookup, return to the previous panel and reading position.
 
-![A knowledge card explaining the reference for a comparison](docs/images/en-knowledge-cards.png)
+![A knowledge card explaining the reference for a comparison](docs/images/en-knowledge-cards.svg)
 
 *“Control” demonstrates the interaction; it is not a mandatory term for every audience. Excessive basic explanations remain a focus of v2.2 testing.*
 
@@ -47,7 +47,7 @@ Knowing each figure is not enough to understand the whole paper. The argument ma
 
 It is not a list of figure titles or a chain of unexplained terms. Parallel evidence, negative findings, supporting checks and open branches should remain visible. Research order alone does not establish chronology or causation.
 
-![An argument map connecting a question, observation and next step](docs/images/en-argument-chain.png)
+![An argument map connecting a question, observation and next step](docs/images/en-argument-chain.svg)
 
 *The simulated difference motivates questions about stability and cause. Those questions explain the next step, rather than “another experiment” serving as a transition.*
 
@@ -121,7 +121,7 @@ Understanding the paper comes first. These tools support lookup, annotation and 
 | Highlighter | Explicitly enable highlighting and undo marks; term colors and personal highlights have independent controls |
 | Notes | Save text or screenshots in the local paper project for a later assistant session |
 
-![Supporting tools: highlighter, legend and notes](docs/images/en-reading-tools.png)
+![Supporting tools: highlighter, legend and notes](docs/images/en-reading-tools.svg)
 
 Project notes require the local service. Browser drafts are a separate store, and saving a note does not trigger an instant GPT response. Zoom, panel switching and lookup return also support reading.
 
