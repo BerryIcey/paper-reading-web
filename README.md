@@ -8,10 +8,10 @@
 
 逐图理解证据，查清陌生概念，跟上全文论证。
 
-[![推荐 v2.1](https://img.shields.io/badge/推荐版本-v2.1-2f6354?style=flat-square)](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1)
+[![推荐 v2.2](https://img.shields.io/badge/推荐版本-v2.2-2f6354?style=flat-square)](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.2)
 [![MIT](https://img.shields.io/badge/License-MIT-657b72?style=flat-square)](LICENSE)
 
-**[下载 v2.1](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.zip) · [查看技能](https://github.com/BerryIcey/paper-to-html/blob/main/skills/paper-to-html-v2.1/SKILL.md) · [更新说明](docs/v2.1-changes.md) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)**
+**[下载 v2.2](https://github.com/BerryIcey/paper-to-html/releases/download/v2.2/paper-to-html-v2.2.zip) · [查看技能](https://github.com/BerryIcey/paper-to-html/blob/main/skills/paper-to-html-v2.2/SKILL.md) · [更新说明](docs/v2.2-changes.md) · [反馈问题](https://github.com/BerryIcey/paper-to-html/issues)**
 
 </div>
 
@@ -33,13 +33,15 @@
 
 ### 02 · 术语知识卡：补足理解，不打断阅读
 
+默认读者具备相关专业本科基础；超出这一基础且影响理解的概念，才需要补充解释与查阅入口。术语从当前文章发现，数据库帮助核对名称、定义与来源。
+
 遇到影响理解的陌生概念，可以从正文、译文或图注中的术语链接打开知识卡。卡片需要讲清 **它是什么、怎样工作或关系如何成立、本文为什么使用它，以及哪些判断容易混淆**，而不只是展开一个缩写。
 
 术语从当前论文发现和判断，不以已有词表是否命中为前提。同名不同义按语境区分；相关概念之间先交代关系，避免突然跳到另一个名词。卡片按需展开，查完可以回到原来的小图和文字滚动位置。
 
 ![术语知识卡：解释概念及其在比较中的作用](docs/images/knowledge-cards.svg)
 
-*这里用“对照”演示卡片和回跳交互。它只是界面示例，不是所有读者都必须标色的固定术语；基础知识过选仍是 v2.2 的测试重点。*
+*这里用“对照”演示卡片和回跳交互。它只是界面示例，不是所有读者都必须标色的固定术语；是否需要标色取决于本篇读者起点和理解影响，不要求把基础名词全部解释。*
 
 ### 03 · 全文论证链：看懂每一步为什么需要
 
@@ -57,19 +59,19 @@
 
 ### 1 · 安装推荐版
 
-下载 [paper-to-html-v2.1.zip](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.zip)，解压后将其中完整的 `paper-to-html-v2.1` 文件夹放进当前设备的 Codex Skill 目录，通常是 `~/.codex/skills/`。已有旧安装时先在技能目录外备份。新开聊天确认技能可用。
+下载 [paper-to-html-v2.2.zip](https://github.com/BerryIcey/paper-to-html/releases/download/v2.2/paper-to-html-v2.2.zip)，解压后将其中完整的 `paper-to-html-v2.2` 文件夹放进当前设备的 Codex Skill 目录，通常是 `~/.codex/skills/`。已有旧安装时先在技能目录外备份。新开聊天确认技能可用。
 
-下载包版本是 **v2.1**，技能调用名称是 **`$paper-to-html-v2.1`**。GitHub 更新不会自动更新电脑上的安装。
+下载包版本是 **v2.2**，技能调用名称是 **`$paper-to-html-v2.2`**。GitHub 更新不会自动更新电脑上的安装。
 
 ### 2 · 提供论文并调用
 
 ```text
-$paper-to-html-v2.1
+$paper-to-html-v2.2
 把这篇论文做成中文共读网页。
 完整翻译核心正文，逐面板解释全部主图，并讲清全文论证。
 ```
 
-提供有权使用的 PDF。默认包含核心正文、全部主图、必要知识卡与文末评议；独立方法细节、附图详解和复习内容可按需追加。缺少补充资料时，助手应说明实际覆盖范围。
+提供有权使用的 PDF。默认包含核心正文、全部主图、必要知识卡与文末评议；若方法、算法或证明构成论文主贡献，也属于核心；复现级方法细节、附图详解和复习内容可按需追加。缺少补充资料时，助手应说明实际覆盖范围。
 
 ### 3 · 阅读并留下问题
 
@@ -83,7 +85,7 @@ $paper-to-html-v2.1
 ```sh
 git clone https://github.com/BerryIcey/paper-to-html.git
 cd paper-to-html
-python skills/paper-to-html-v2.1/assets/reader-components/reading_server.py --root demo --port 18765
+python skills/paper-to-html-v2.2/assets/reader-components/reading_server.py --root demo --port 18765
 ```
 
 在同一台设备打开 `http://127.0.0.1:18765/paper-reading.html`。这只是临时演示服务；正式项目需要配置独立后台运行方式。
@@ -94,17 +96,19 @@ python skills/paper-to-html-v2.1/assets/reader-components/reading_server.py --ro
 
 | 版本 | 状态 | 内容与入口 |
 |---|---|---|
-| **v2.1** | **最新推荐 · 已发布** | [下载](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1) · [更新报告](docs/v2.1-changes.md)：完整逐图讲解要求、自适应术语与知识卡、原文和图注查阅入口 |
+| **v2.2** | **最新推荐 · 已发布** | [下载](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.2) · [更新报告](docs/v2.2-changes.md)：本科读者起点、跨领域论证适配、来源核对、移除引用角标与键盘预览 |
+| v2.1 | 历史版 · 保留原包 | [下载](https://github.com/BerryIcey/paper-to-html/releases/tag/v2.1) · [更新报告](docs/v2.1-changes.md)：完整逐图讲解要求、自适应术语与知识卡、原文和图注查阅入口 |
 | v2.0.2 | 历史版 | [查看快照](https://github.com/BerryIcey/paper-to-html/tree/v2.0.2) · [早期变更](docs/v2-changes.md) |
 | v1.0.0 | 原始版 | [查看快照](https://github.com/BerryIcey/paper-to-html/tree/v1.0.0)，用于对照和回退 |
 
-**v2.2 正在本地测试，尚未公开发布。** 它增加本科读者起点筛选及进一步跨领域适配；这些改动不包含在 v2.1 下载包中。Skill 版本与某篇论文网页自己的版本号分别管理。
+**v2.2 已正式发布并设为推荐版。** v2.1 的原始下载包和历史标签继续保留。Skill 版本与某篇论文网页自己的版本号分别管理。
 
-[v2.1 校验文件](https://github.com/BerryIcey/paper-to-html/releases/download/v2.1/paper-to-html-v2.1.sha256) · [版本差异](https://github.com/BerryIcey/paper-to-html/compare/v2.0.2...v2.1)。不要混用不同版本的参考文件。[个人 Skill 库](https://github.com/BerryIcey/my-skills)保留项目入口。
+[v2.2 校验文件](https://github.com/BerryIcey/paper-to-html/releases/download/v2.2/paper-to-html-v2.2.sha256) · [版本差异](https://github.com/BerryIcey/paper-to-html/compare/v2.1...v2.2)。不要混用不同版本的参考文件。[个人 Skill 库](https://github.com/BerryIcey/my-skills)保留项目入口。
 
 ## 使用前需要知道
 
-- **制作环境：** 支持 Skill 的助手和 PDF 读取能力；组件与服务使用 Python 标准库，PDF 裁图需要 PyMuPDF，脚本语法检查使用 Node.js。
+- **制作环境：** 支持 Skill 的助手和 PDF 读取能力；组件与服务使用 Python 标准库，PDF 裁图需要 PyMuPDF，脚本语法检查使用 Node.js；可选浏览器回归需要 Playwright 和已安装浏览器。
+- **引用显示：** 原文、译文、图注与讲解去除纯文献引用编号和角标；保留图号、单位、公式/化学上标等科学内容，来源留在台账和原论文。
 - **核对范围：** 翻译、图例、数值与推理需要逐项核对。测试通过不证明解释全部正确，也不证明所有领域都已验证。
 - **保存边界：** 正文可离线阅读；项目笔记依赖本地服务。目前没有断线自动补存、跨设备同步或即时问答。
 - **设备访问：** `127.0.0.1` 只供本机使用。手机能读离线文件，不代表能连接电脑的本地地址提交笔记。
